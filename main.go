@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"test/algorithm/Queue"
+	"test/algorithm/Stack"
 	"time"
 )
 
@@ -125,8 +125,14 @@ func main() {
 	//链表相关
 	//obj := LinkedList.LinkedList{}
 	//obj.Run()
-	//栈和队列
-	obj := Queue.Queue{}
+	//队列相关(循环队列和普通队列)
+	//obj := Queue.Queue{}
+	//err := obj.Run()
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
+	//栈相关
+	obj := Stack.Stack{}
 	err := obj.Run()
 	if err != nil {
 		fmt.Println(err)
