@@ -127,7 +127,10 @@ func main() {
 	//obj.Run()
 	//栈和队列
 	obj := Queue.Queue{}
-	obj.Run()
+	err := obj.Run()
+	if err != nil {
+		fmt.Println(err)
+	}
 	//time.Sleep(1*time.Second)
 
 	/*
