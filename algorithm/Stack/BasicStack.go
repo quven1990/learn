@@ -2,8 +2,8 @@ package Stack
 
 type BasicStack struct {
 	StackElement []int
-	Size         int
-	Limit        int
+	Size         int //important
+	Limit        int //important
 }
 
 //创建栈
@@ -30,7 +30,15 @@ func (b *BasicStack) Pop() int {
 	res := b.StackElement[b.Size-1]
 	b.Size--
 	return res
+}
 
+//只查询栈数据，但是不做弹出动作
+func (b *BasicStack) Peek() int {
+	if b.IsEmpty() {
+		return -1
+	}
+	res := b.StackElement[b.Size-1]
+	return res
 }
 
 //判断栈是否为空
