@@ -46,6 +46,26 @@ func (this *MyCircularQueue) DeQueue() bool {
 	return true
 }
 
+//弹出队列元素
+func (this *MyCircularQueue) DeQueueWithVal() int {
+	if this.IsEmpty() { //空队列 无法弹出
+		return -1
+	}
+	if (this.Left + 1) == this.Limit {
+		this.Left = 0
+	} else {
+		this.Left++
+	}
+	this.Size-- //长度-1
+	var index int
+	if this.Left-1 < 0 {
+		index = this.Limit - 1
+	} else {
+		index = this.Left - 1
+	}
+	return this.QueueEle[index]
+}
+
 //返回队列第一个元素
 func (this *MyCircularQueue) Front() int {
 	if this.IsEmpty() {
