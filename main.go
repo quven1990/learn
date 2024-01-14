@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"test/algorithm/Queue"
+	"test/algorithm/Stack"
 	"time"
 )
 
@@ -132,7 +132,7 @@ func main() {
 	//	fmt.Println(err)
 	//}
 	//栈相关
-	obj := Queue.Queue{}
+	obj := Stack.Stack{}
 	err := obj.Run()
 	if err != nil {
 		fmt.Println(err)
